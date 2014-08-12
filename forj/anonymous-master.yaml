@@ -1,0 +1,17 @@
+blueprint:
+  name: anonymous
+  description: anonymous blueprint for wsTax team
+  icon: 
+    file : redstone.png
+    content : (--- base64 encoded ---)
+  # by default, it should refer to our forj web documentation, to present the blueprint documentation. But we can propose to change it.
+  documentation : 'http://openstack.org/forj'
+  locations:
+    modules: 
+      - src-repo: anonymous
+        git: https://github.com/SteveYangHJ/anonymous.git
+        install:
+          puppet-apply: install
+        uninstall:
+          puppet-apply: uninstall
+		  
